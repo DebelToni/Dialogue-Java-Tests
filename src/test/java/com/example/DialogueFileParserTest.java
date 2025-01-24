@@ -17,8 +17,7 @@ public class DialogueFileParserTest {
 
 		@Test
 		public void testParseDialogueFile() throws IOException {
-				//"src/test/resources/sample.txt"
-				//Paths.get(getClass().getResource("/sample.txt").toURI())
+				//Paths.get(getClass().getResource("/ExampleTree.txt").toURI())
 		DialogueTree tree = DialogueFileParser.parseDialogueFile("src/test/resources/ExampleTree.txt");
 
 			assertNotNull(tree);
