@@ -44,7 +44,7 @@ public class AppTest {
 
 		Player player = new Player(100, 11, 11, 100, new ArrayList<String>());
 
-				// naglasih go da se igrae samo maj?
+		// naglasih go da se igrae samo maj?
 		String simulatedInput = "" + "4\n" + "\n" + "3\n" + "\n" + "1\n" + "2\n";
 
 		InputStream input = new ByteArrayInputStream(simulatedInput.getBytes());
@@ -54,5 +54,19 @@ public class AppTest {
 		app.playGame(player, tree);
 
 		assertTrue(player.getInventory().contains("Light armor"));
+	}
+
+	@Test
+	public void testCollectRewards() {
+		App game = new App();
+		DialogueTree tree = game.buildATree();
+		Player player = new Player(100, 11, 11, 100, new ArrayList<String>());
+		game.collectRewards(player, tree);
+		// assertTrue(player.getInventory().contains("Light armor"));
+		System.out.println(
+				"---------------------------\n"
+						+ player.getInventory()
+						+ "\n--------------------------- \n");
+		assertTrue(player.getInventory().contains("Dragon head"));
 	}
 }
