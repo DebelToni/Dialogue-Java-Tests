@@ -74,3 +74,5 @@ Tests run: 16, Failures: 0, Errors: 0, Skipped: 0
 <br><br>
 ### Test coverage:
 ![plot](Test_Coverage_Numers.png)
+<br><br>
+(Направим съм малки промени и добавки в кода, които не са по условие, но трябват, за да работи - описал съм всичко важно в коментари)
