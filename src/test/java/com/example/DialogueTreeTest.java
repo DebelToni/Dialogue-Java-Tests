@@ -26,4 +26,27 @@ public class DialogueTreeTest {
 		DialogueTree tree = new DialogueTree(root);
 		assertEquals(root, tree.findById(0));
 	}
+
+	@Test
+	public void testGetRoot() {
+		List<DialogueOption> options = new ArrayList<>();
+		options.add(new DialogueOption("option1", null));
+		DialogueStep root = new DialogueStep("durvo", options, null);
+		DialogueTree tree = new DialogueTree(root);
+		assertEquals(root, tree.getRoot());
+	}
+
+	@Test
+	public void testSetNodesErrorPrivateFunction() {
+		List<DialogueOption> options = new ArrayList<>();
+		options.add(new DialogueOption("option1", null));
+		DialogueStep root = new DialogueStep("durvo", options, null);
+		DialogueTree tree = new DialogueTree(root);
+		Exception e = assertThrows(
+				IllegalArgumentException.class,
+				() -> {
+					tree.findById(0);
+				});
+		assertEquals("Step with id=0 does not exist!", e.getMessage());
+	}
 }

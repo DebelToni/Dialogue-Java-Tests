@@ -1,4 +1,5 @@
 # Homework for Dialog tree structure in java + tests
+(тестове виж надолу)
 
 Успях да напиша тестове за играенето, което намирам за доста яко!
 Вкарвах в стандартния input "натискания" на клавиатурата, за да симулариам играта
@@ -70,5 +71,6 @@ Tests run: 16, Failures: 0, Errors: 0, Skipped: 0
 [INFO] Finished at: 2025-01-24T23:23:04+02:00
 [INFO] ------------------------------------------------------------------------
 ```
-
-
+<br><br>
+### Test coverage:
+![plot](Test_Coverage_Numers.png)
