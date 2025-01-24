@@ -1,7 +1,7 @@
 package com.example;
 
-import java.util.List;
 import java.util.ArrayList;
+import java.util.List;
 
 class DialogueOption {
 	private String line;
@@ -31,6 +31,7 @@ class DialogueOption {
 		this.rewardModifiers = new ArrayList<IReward>();
 		this.requirementModifiers = new ArrayList<IRequirement>();
 	}
+
 	public void setStep(DialogueStep step) {
 		this.step = step;
 	}
@@ -84,4 +85,6 @@ class DialogueOption {
 			modifier.take(player);
 		}
 	}
+
 }
+

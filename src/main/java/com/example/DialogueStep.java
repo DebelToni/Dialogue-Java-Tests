@@ -44,7 +44,7 @@ public class DialogueStep {
 
 	public List<DialogueOption> getPlayerOptions() {
 		if (player_options.size() == 0) {
-			//return null;
+			// return null;
 		}
 		return player_options;
 	}
@@ -61,5 +61,13 @@ public class DialogueStep {
 			throw new IllegalArgumentException("Option cannot be null");
 		}
 		player_options.add(option);
+	}
+
+	// Tezi metodi ne sa mi nuzni za da rabotq s durvoto prosto gi pravq zastoto,
+	// bez tqh praveneto na durvo shteshe da se uslozni mnogo ot fajl format. V
+	// App clasa sum slozil primerna fukciq kak da se napravi bez tqh, no nqmah
+	// vreme da imzilsq i format i parser za fajl format bez pomostni fukcii:
+	public void setNextStep(DialogueStep next) {
+		this.next_step = next;
 	}
 }

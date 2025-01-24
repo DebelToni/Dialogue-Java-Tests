@@ -1,0 +1,25 @@
+STEP s4
+NPC=Welcome to DunerLand!. How do I help you boss?
+OPTIONS=I want buy armor -> s2 [REQ=,REW=,MOD=]
+        | I want to speak with the king -> s1 [REQ=,REW=,MOD=CHAOption]
+        | I have slain the dragon -> s3 [REQ=Dragon head,REW=Small bag of gold,MOD=]
+        | SLAY DROGON! -> s3 [REQ=,REW=Dragon head,MOD=]
+ENDSTEP
+
+STEP s3
+NPC=Done, anything else?
+NEXT=s4
+ENDSTEP
+
+STEP s2
+NPC=I have some armors
+OPTIONS=Give me Light armor. -> -1 [REQ=Medium bag of gold,REW=Light armor,MOD=CHALess5Option]
+        | Give me Light armor and dont cheat! -> -1 [REQ=Small bag of gold,REW=Light armor,MOD=CHA5Option]
+ENDSTEP
+
+STEP s1
+NPC=I am the king. What do you want?
+OPTIONS=To marry your daughter. -> -1 [REQ=,REW=,MOD=]
+        | To end your tyranny! -> -1 [REQ=,REW=,MOD=]
+ENDSTEP
+
